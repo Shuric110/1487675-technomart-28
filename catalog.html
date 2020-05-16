@@ -6,8 +6,6 @@
   </head>
   <body>
     <header class="main-header">
-      <h1>Компания «Техномарт»</h1>
-      <h1>Компания «Техномарт»</h1>
       <ul>
         <li><img src="img/empty.png" alt="Техномарт"></li>
         <li>
@@ -25,18 +23,28 @@
         строительных материалов<br>
         и инструментов для ремонта
       </p>
-      <section>
-        <h2>Адрес и телефон</h2>
-        <p>
-          <a href="tel:+7-812-555-05-55">+7 (812) 555-05-55</a>
-          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-        </p>
-      </section>
-      <section>
-        <a href="blank.html">Войти</a>
-        <a href="blank.html">Регистрация</a>
-        <!-- ********** тут изменения для вошедшего пользователя!!!!!!!!           ****************-->
-      </section>
+      <address>
+        <a href="tel:+7-812-555-05-55">+7 (812) 555-05-55</a>
+        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+      </address>
+      <div><!-- Этот и следующий div'ы отображаются в зависимости от того, залогинен ли пользователь -->
+        <ul>
+          <li><a href="blank.html">Войти</a></li>
+          <li><a href="blank.html">Регистрация</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li>
+            <a href="blank.html">Равшан Джамшутович</a>
+            <a href="blank.html">Выход</a>
+          </li>
+        </ul>
+        <ul>
+          <li><a href="blank.html">Мои заказы</a></li>
+          <li><a href="blank.html">Личный кабинет</a></li>
+        </ul>
+      </div>
       <nav>
         <ul>
           <li><a href="index.html">Главная</a></li>
@@ -51,14 +59,13 @@
     </header>
 
     <main>
-      <nav>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="blank.html">Каталог</a></li>
-          <li><a href="blank.html">Инструмент</a></li>
-          <li><a href="blank.html">Перфораторы</a></li>
-        </ul>
-      </nav>
+      <h1>Компания «Техномарт»</h1>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="blank.html">Каталог</a></li>
+        <li><a href="blank.html">Инструмент</a></li>
+        <li><a href="blank.html">Перфораторы</a></li>
+      </ul>
 
       <h2>Перфораторы</h2>
 
@@ -127,8 +134,7 @@
       </section>
 
       <section>
-        <h3>Сортировка</h3>
-        <p>Сортировка:</p>
+        <h3>Сортировка:</h3>
         <a href="#">По цене</a>
         <a href="#">По типу</a>
         <a href="#">По функционалу</a>
@@ -137,8 +143,7 @@
       </section>
 
       <section>
-        <h3>Фильтр</h3>
-        <p>Фильтр:</p>
+        <h3>Фильтр:</h3>
         <form method="post" action="https://echo.htmlacademy.ru/">
           <fieldset>
             <legend>Цена:</legend>
@@ -199,10 +204,10 @@
 
     <footer class="main-footer">
       <img src="img/empty.png" alt="Техномарт">
-      <p>
-        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+      <address>
+        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         <a href="tel:+7-812-555-05-55">+7 (812) 555-05-55</a>
-      </p>
+      </address>
       <ul>
         <li><a href="index.html">Компания</a></li>
         <li><a href="blank.html">Новости</a></li>
