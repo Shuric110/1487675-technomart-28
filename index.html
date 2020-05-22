@@ -45,7 +45,7 @@
     <main>
       <!-- Начало красной области -->
       <section>
-        <h2>Предлагаем вам</h2>
+        <h2 class="visually-hidden">Предлагаем вам</h2>
         <div>
           <h3>Материалы</h3>
           <a href="blank.html">на любой вкус</a>
@@ -164,7 +164,7 @@
             Залезть в долговую яму стало проще!<br>
             Кредитные консультанты придут вам на помощь.
           </p>
-          <a href="blank.html">Отпрвить заявку</a>
+          <a href="blank.html">Отправить заявку</a>
         </div>
       </section>
 
@@ -232,5 +232,22 @@
         <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
       </p>
     </footer>
+
+    <section>
+      <h2 class="visually-hidden">Карта проезда</h2>
+      <img src="img/popup-map.png" width="970" height="477" alt="Карта проезда">
+      <button type="button">Закрыть</button>
+    </section>
+
+    <section>
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <form method="post" action="https://echo.htmlacademy.ru/">
+        <label>Ваше имя: <input type="text" name="name" placeholder="Имя Фамилия"></label>
+        <label>Ваш e-mail: <input type="email" name="email" placeholder="email@example.com"></label>
+        <label>Текст письма: <textarea name="msg" placeholder="В свободной форме"></textarea></label>
+        <button type="submit">Отправить</button>  <!-- В макете здесь "ОФОРМИТЬ ЗАКАЗ", но это похоже на ошибку -->
+      </form>
+      <button type="button">Закрыть</button>
+    </section>
   </body>
 </html>
