@@ -63,46 +63,53 @@
       <div class="common-wrapper">
         <section>
           <h2 class="visually-hidden">Предлагаем вам</h2>
-          <div>
-            <h3>Материалы</h3>
-            <a href="blank.html">на любой вкус</a>
-          </div>
-          <div>
-            <h3>Инструмент</h3>
-            <a href="blank.html">на все случаи</a>
-          </div>
-          <div>
-            <h3>Техника</h3>
-            <a href="blank.html">для стройки</a>
-          </div>
-          <div>
-            <h3>Скидки 50%</h3>
-            <a href="blank.html">на 350 товаров</a>
-          </div>
-          <div>
-            <h3>Доставка</h3>
-            <a href="blank.html">бесплатно</a>
-          </div>
-
-          <div>
-            <button>Предыдущий слайд</button>
-            <button>Следующий слайд</button>
-            <div>
-              <h3>Перфораторы</h3>
-              <p>Настоящие мужские игрушки</p>
-              <a href="catalog.html">Открыть каталог</a>
+          <div class="promo-block">
+            <div class="promo-item new-ribbon">
+              <h3>Материалы</h3>
+              <a href="blank.html">на любой вкус</a>
             </div>
-            <div>
-              <h3>Дрели</h3>
-              <p>Соседям на радость!</p>
-              <a href="catalog.html">Открыть каталог</a>
+            <div class="promo-item">
+              <h3>Инструмент</h3>
+              <a href="blank.html">на все случаи</a>
+            </div>
+            <div class="promo-item">
+              <h3>Техника</h3>
+              <a href="blank.html">для стройки</a>
+            </div>
+            <div class="promo-item">
+              <h3>Скидки 50%</h3>
+              <a href="blank.html">на 350 товаров</a>
+            </div>
+            <div class="promo-item">
+              <h3>Доставка</h3>
+              <a href="blank.html">бесплатно</a>
+            </div>
+
+            <div class="promo-slider">
+              <div class="promo-slider-item active">
+                <div>
+                  <h3>Перфораторы</h3>
+                  <p>Настоящие мужские игрушки</p>
+                </div>
+              </div>
+              <div class="promo-slider-item">
+                <div>
+                  <h3>Дрели</h3>
+                  <p>Соседям на радость!</p>
+                </div>
+              </div>
+              <button type="button" id="promo-slider-button-prev">Предыдущий слайд</button>
+              <button type="button" id="promo-slider-button-next">Следующий слайд</button>
+              <a class="button-red" href="catalog.html">Открыть каталог</a>
             </div>
           </div>
         </section>
 
         <section>
-          <h2>Популярные товары:</h2>
-          <a href="blank.html">Все популярные товары</a>
+          <div class="section-title-wrapper background-accent2">
+            <h2 class="section-title title-gray">Популярные товары:</h2>
+            <a class="button-red" href="blank.html">Все популярные товары</a>
+          </div>
           <ul class="product-list">
             <li class="product-card">
               <img src="img/goods-bfg9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
@@ -110,7 +117,7 @@
               <p>32500 р.</p>
               <button>25500 р.</button>
             </li>
-            <li class="product-card">
+            <li class="product-card new-ribbon">
               <img src="img/goods-bfg3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
               <h3>Перфоратор BOSCH BFG 3000</h3>
               <p>22500 р.</p>
@@ -122,7 +129,7 @@
               <p>30500 р.</p>
               <button>25500 р.</button>
             </li>
-            <li class="product-card">
+            <li class="product-card new-ribbon">
               <img src="img/goods-bfg2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
               <h3>Перфоратор BOSCH BFG 2000</h3>
               <button>12500 р.</button>
@@ -131,9 +138,11 @@
         </section>
 
         <section>
-          <h2>Популярные производители:</h2>
-          <a href="blank.html">Все популярные производители</a>
-          <ul>
+          <div class="section-title-wrapper background-accent2">
+            <h2 class="section-title title-gray">Популярные производители:</h2>
+            <a class="button-red" href="blank.html">Все популярные производители</a>
+          </div>
+          <ul class="partners-block-list">
             <li><img src="img/partners-1.png" width="126" height="37" alt="Bosch"></li>
             <li><img src="img/partners-2.png" width="134" height="40" alt="Makita"></li>
             <li><img src="img/partners-3.png" width="146" height="44" alt="DeWALT"></li>
@@ -146,20 +155,20 @@
         </section>
       </div>
 
-      <section class="services-block">
+      <section class="common-block services-block">
         <div class="common-wrapper">
-          <h2>Сервисы</h2>
+          <h2 class="common-block-title">Сервисы</h2>
           <p>
             Хороший интернет-магазин отличается от плохого не только ценами!<br>
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
-          <ul>
-            <li>Доставка</li>
-            <li>Гарантия</li>
-            <li>Кредит</li>
+          <ul class="services-block-list">
+            <li><button type="button" class="active">Доставка</button></li>
+            <li><button type="button">Гарантия</button></li>
+            <li><button type="button">Кредит</button></li>
           </ul>
-          <div>
-            <h3>Доставка</h3>
+          <div class="services-block-page active">
+            <h3 class="common-block-title title-gray">Доставка</h3>
             <p>
               Мы с удовольствием доставим ваш товар прямо<br>
               к вашему подъезду совершенно бесплатно!<br>
@@ -167,8 +176,8 @@
               поднимая его на ваш этаж!
             </p>
           </div>
-          <div>
-            <h3>Гарантия</h3>
+          <div class="services-block-page">
+            <h3 class="common-block-title title-gray">Гарантия</h3>
             <p>
               Если купленный у нас товар поломается или заискрит, <br>
               а также в случае пожара, спровоцированного его<br>
@@ -177,8 +186,8 @@
               Дом уж восстановите как-нибудь сами.
             </p>
           </div>
-          <div>
-            <h3>Кредит</h3>
+          <div class="services-block-page">
+            <h3 class="common-block-title title-gray">Кредит</h3>
             <p>
               Залезть в долговую яму стало проще!<br>
               Кредитные консультанты придут вам на помощь.
@@ -191,8 +200,8 @@
       <!-- Окончание красной области -->
 
       <div class="common-wrapper">
-        <section>
-          <h2 class="section-title">Компания «Техномарт»</h2>
+        <section class="common-block">
+          <h2 class="common-block-title">Компания «Техномарт»</h2>
           <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
           <p>
             Мы можем доставить ваш товар в самые отдаленные точки России!<br>
@@ -206,8 +215,8 @@
           <a class="button-red" href="blank.html">Подробнее о компании</a>
         </section>
 
-        <section>
-          <h2 class="section-title">Контакты</h2>
+        <section class="common-block">
+          <h2 class="common-block-title">Контакты</h2>
           <p>
             Вы можете забрать товар сами,<br>
             заехав в наш офис:
@@ -284,7 +293,7 @@
     <section class="popup">
       <h2 class="visually-hidden">Карта проезда</h2>
       <img src="img/popup-map.png" width="970" height="477" alt="Карта проезда">
-      <button type="button">Закрыть</button>
+      <button class="popup-close-button" type="button">Закрыть</button>
     </section>
 
     <section class="popup">
@@ -293,9 +302,11 @@
         <label>Ваше имя: <input type="text" name="name" placeholder="Имя Фамилия"></label>
         <label>Ваш e-mail: <input type="email" name="email" placeholder="email@example.com"></label>
         <label>Текст письма: <textarea name="msg" placeholder="В свободной форме"></textarea></label>
-        <button type="submit">Отправить</button>
+        <div class="popup-controls">
+          <button class="button-red" type="submit">Отправить</button>
+        </div>
       </form>
-      <button type="button">Закрыть</button>
+      <button class="popup-close-button" type="button">Закрыть</button>
     </section>
   </body>
 </html>
