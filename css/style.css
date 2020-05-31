@@ -209,15 +209,15 @@ a.common-logo {
   color: var(--light-gray);
 }
 
-.main-header-account a svg {
+.main-header-account a svg {            /*  ***** тройная вложенность     */
   fill: var(--light-gray);
 }
 
-.main-header-account a:hover > svg {
+.main-header-account a:hover svg {       /*  ***** тройная вложенность     */
   fill: var(--dark-gray);
 }
 
-.main-header-account a:active > svg {
+.main-header-account a:active svg {      /*  ***** тройная вложенность     */
   fill: var(--light-gray);
 }
 
