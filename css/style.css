@@ -100,6 +100,9 @@ a.common-logo img {
   background-color: var(--basic-red);
   color: var(--basic-white);
   border: none;
+  text-align: center;
+  padding: 10px 35px;
+  min-width: 192px;
 }
 
 .button-red:active {
@@ -342,7 +345,12 @@ a.common-logo img {
   line-height: 34px;
   font-weight: normal;
   text-transform: uppercase;
-  margin-bottom: 25px;
+  margin: 0;
+}
+
+.common-block p {
+  margin: 0;
+  margin-top: 25px;
 }
 
 /* Main - promo-block */
@@ -478,16 +486,23 @@ a.common-logo img {
 
 /* Main - about & contacts */
 
-.main-about-contacts-container {
-  display: grid;
-  grid-template-columns: 460px 300px;
-  grid-column-gap: auto;
+.about-contacts-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-block {
+  width: 460px;
 }
 
 .about-block-partner-list {
   font-family: "Cuprum", "Arial Narrow", sans-serif;
   font-size: 18px;
   list-style: none;
+}
+
+.contacts-block {
+  width: 300px;
 }
 
 /* Main - sort */
