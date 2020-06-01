@@ -83,6 +83,7 @@ img {
 }
 
 a.common-logo {
+  display: block;
   background: var(--basic-red);
   box-shadow: inset 0px -5px 0px var(--logo-shadow);
 }
@@ -475,7 +476,13 @@ a.common-logo img {
   display: block;
 }
 
-/* Main - partners */
+/* Main - about & contacts */
+
+.main-about-contacts-container {
+  display: grid;
+  grid-template-columns: 460px 300px;
+  grid-column-gap: auto;
+}
 
 .about-block-partner-list {
   font-family: "Cuprum", "Arial Narrow", sans-serif;
@@ -545,7 +552,7 @@ a.common-logo img {
 /* Main - popup*/
 
 .popup {
-/*  display: none;*/
+  display: none;
   font-family: "Cuprum", "Arial Narrow", sans-serif;
   font-size: 18px;
 }
@@ -573,8 +580,27 @@ a.common-logo img {
   background-color: var(--menu-basic);
 }
 
-.main-footer-bottom {
-  background-color: var(--menu-dark);
+.main-footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 54px;
+}
+
+.main-footer-top-company {
+  width: 350px;
+}
+
+.main-footer-logo {
+  width: 220px;
+  height: 68px;
+  box-sizing: border-box;
+  padding-top: 21px;
+}
+
+.main-footer-address p {
+  margin: 0;
+  margin-top: 22px;
 }
 
 .main-footer-address, .main-footer-address a {
@@ -584,13 +610,31 @@ a.common-logo img {
   color: var(--background-accent);
 }
 
+.main-footer-nav-wrap {
+  width: 560px;
+  overflow-x: hidden;
+}
+
 .main-footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+/*  width: 560px;*/
+  margin: 0;
+  margin-right: -60px;
+  padding: 0;
+  padding-top: 3px;
   list-style: none;
   font-size: 18px;
   color: var(--background-accent);
 }
 
-.main-footer-nav li:nth-child(n+6) {
+.main-footer-nav > li {
+  padding-top: 34px;
+  margin-right: 60px;
+}
+
+.main-footer-nav > li:nth-child(n+6) {
   color: var(--footer-gold);
 }
 
@@ -603,14 +647,47 @@ a.common-logo img {
   text-decoration: none;
 }
 
+.main-footer-bottom {
+  background-color: var(--menu-dark);
+}
+
+.main-footer-bottom-container {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: 300px 1fr 170px 110px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+
+  align-items: flex-start;
+}
+
 .main-footer-bottom p {
   color: var(--basic-white);
   font-size: 16px;
   line-height: 18px;
+  margin: 0;
 }
 
 .main-footer-bottom a {
   color: var(--footer-gold);
+}
+
+.main-footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 300px;
+  padding: 0;
+  margin: 0;
+}
+
+.main-footer-social li {
+  margin: 0 1px;
+  line-height: 1px;
+}
+
+main-footer-social a {
+  display: block;
 }
 
 .main-footer-social-link svg {
