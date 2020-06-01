@@ -10,12 +10,12 @@
   <body>
     <header class="main-header">
       <div class="main-header-top">
-        <div class="common-wrapper">
-          <a class="common-logo" href="index.html"><img src="img/logo-technomart.svg" width="108" height="18" alt="Техномарт"></a>
-          <form class="main-header-search" method="get" action="https://echo.htmlacademy.ru/">
+        <div class="common-wrapper main-header-top-container">
+          <a class="common-logo main-header-top-logo"><img src="img/logo-technomart.svg" width="108" height="18" alt="Техномарт"></a>
+          <form class="main-header-search-form" method="get" action="https://echo.htmlacademy.ru/">
             <label for="input-search" class="visually-hidden">Поиск:</label>
             <input id="input-search" class="main-header-search-input" type="text" name="search" placeholder="Поиск:">
-            <input type="submit" value="Искать">
+            <input class="visually-hidden" type="submit" value="Искать">
           </form>
           <ul class="main-header-widgets">
             <li><a href="blank.html">Закладки: <output>0</output></a></li>
@@ -25,42 +25,45 @@
         </div>
       </div>
       <div class="common-wrapper">
-        <h1>
-          Интернет-магазин<br>
-          строительных материалов<br>
-          и инструментов для ремонта
-        </h1>
-        <address class="main-header-address">
-          <a href="tel:+7-812-555-05-55">+7 (812) 555-05-55</a>
-          <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        </address>
-
-        <div>
-          <div class="main-header-account">
-            <a class="main-header-account-username" href="blank.html">
-              <svg width="20" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979
-                  2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39C-.026 14.902 0 18 0 18h20s.025-3.099-2.119-3.834z" />
-              </svg>
-              Равшан Джамшутович
-            </a>
-            <a href="blank.html">
-              <svg width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 8.5L11.125 0v6h-6v5h6v6L20 8.5z" /><path d="M2.106 13.952V3.048c.018-.376.17-1.057 1.01-1.057h5.027V0H3.116C.938 0 .112 1.81.086
-                  3.027v10.946C.113 15.189.939 17 3.117 17h5.027v-1.99H3.116c-.84 0-.992-.683-1.01-1.058z" />
-              </svg>
-              <span class="visually-hidden">Выход</span>
-            </a>
+        <div class="main-header-middle">
+          <div>
+            <h1>
+              Интернет-магазин<br>
+              строительных материалов<br>
+              и инструментов для ремонта
+            </h1>
           </div>
-          <ul class="main-header-account-links">
-            <li><a href="blank.html">Мои заказы</a></li>
-            <li><a href="blank.html">Личный кабинет</a></li>
-          </ul>
+          <div>
+            <address class="main-header-address">
+              <a href="tel:+7-812-555-05-55">+7 (812) 555-05-55</a>
+              <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+            </address>
+          </div>
+          <div>
+            <div class="main-header-account">
+              <a class="main-header-account-username" href="blank.html">
+                <svg width="20" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979
+                    2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39C-.026 14.902 0 18 0 18h20s.025-3.099-2.119-3.834z" />
+                </svg>
+                Равшан Джамшутович
+              </a>
+              <a href="blank.html">
+                <svg width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 8.5L11.125 0v6h-6v5h6v6L20 8.5z" /><path d="M2.106 13.952V3.048c.018-.376.17-1.057 1.01-1.057h5.027V0H3.116C.938 0 .112 1.81.086
+                    3.027v10.946C.113 15.189.939 17 3.117 17h5.027v-1.99H3.116c-.84 0-.992-.683-1.01-1.058z" />
+                </svg>
+                <span class="visually-hidden">Выход</span>
+              </a>
+            </div>
+            <ul class="main-header-account-links">
+              <li><a href="blank.html">Мои заказы</a></li>
+              <li><a href="blank.html">Личный кабинет</a></li>
+            </ul>
+          </div>
         </div>
-
-
-        <nav class="main-header-nav">
-          <ul>
+        <nav>
+          <ul class="main-header-nav">
             <li><a href="index.html">Главная</a></li>
             <li><a href="blank.html">Компания</a></li>
             <li><a href="catalog.html">Каталог</a></li>

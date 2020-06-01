@@ -10,12 +10,12 @@
   <body>
     <header class="main-header">
       <div class="main-header-top">
-        <div class="common-wrapper">
-          <a class="common-logo"><img src="img/logo-technomart.svg" width="108" height="18" alt="Техномарт"></a>
-          <form class="main-header-search" method="get" action="https://echo.htmlacademy.ru/">
+        <div class="common-wrapper main-header-top-container">
+          <a class="common-logo main-header-top-logo"><img src="img/logo-technomart.svg" width="108" height="18" alt="Техномарт"></a>
+          <form class="main-header-search-form" method="get" action="https://echo.htmlacademy.ru/">
             <label for="input-search" class="visually-hidden">Поиск:</label>
             <input id="input-search" class="main-header-search-input" type="text" name="search" placeholder="Поиск:">
-            <input type="submit" value="Искать">
+            <input class="visually-hidden" type="submit" value="Искать">
           </form>
           <ul class="main-header-widgets">
             <li><a href="blank.html">Закладки: <output>0</output></a></li>
@@ -25,27 +25,35 @@
         </div>
       </div>
       <div class="common-wrapper">
-        <h1>
-          Интернет-магазин<br>
-          строительных материалов<br>
-          и инструментов для ремонта
-        </h1>
-        <address class="main-header-address">
-          <a href="tel:+7-812-555-05-55">+7 (812) 555-05-55</a>
-          <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        </address>
-        <ul class="main-header-account">
-          <li><a class="main-header-account-login" href="blank.html">
-            <svg width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.167 8.5L5.714 0v6H0v5h5.714v6l8.453-8.5z"/><path d="M16.177 15.01H11.39V17h4.787c2.074 0 2.861-1.81 2.885-3.026V3.028C19.038
-              1.811 18.252 0 16.177 0H11.39v1.99h4.787c.8 0 .945.681.962 1.057v10.904c-.016.376-.163 1.059-.962 1.059z"/>
-            </svg>
-            Войти
-          </a></li>
-          <li><a href="blank.html">Регистрация</a></li>
-        </ul>
-        <nav class="main-header-nav">
-          <ul>
+        <div class="main-header-middle">
+          <div>
+            <h1>
+              Интернет-магазин<br>
+              строительных материалов<br>
+              и инструментов для ремонта
+            </h1>
+          </div>
+          <div>
+            <address class="main-header-address">
+              <a href="tel:+7-812-555-05-55">+7 (812) 555-05-55</a>
+              <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+            </address>
+          </div>
+          <div>
+            <ul class="main-header-account">
+              <li><a class="main-header-account-login" href="blank.html">
+                <svg width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.167 8.5L5.714 0v6H0v5h5.714v6l8.453-8.5z" /><path d="M16.177 15.01H11.39V17h4.787c2.074 0 2.861-1.81 2.885-3.026V3.028C19.038
+                  1.811 18.252 0 16.177 0H11.39v1.99h4.787c.8 0 .945.681.962 1.057v10.904c-.016.376-.163 1.059-.962 1.059z" />
+                </svg>
+                Войти
+              </a></li>
+              <li><a href="blank.html">Регистрация</a></li>
+            </ul>
+          </div>
+        </div>
+        <nav>
+          <ul class="main-header-nav">
             <li><a href="index.html">Главная</a></li>
             <li><a href="blank.html">Компания</a></li>
             <li><a href="catalog.html">Каталог</a></li>
