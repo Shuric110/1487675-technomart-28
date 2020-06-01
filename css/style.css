@@ -311,15 +311,26 @@ a.common-logo img {
   text-transform: uppercase;
 }
 
+.section-title-block {
+  padding: 29px;
+  position: relative;
+}
+
 .section-title {
+  display: block;
   font-family: "Cuprum", "Arial Narrow", sans-serif;
   font-size: 30px;
   line-height: 34px;
   font-weight: normal;
   text-transform: uppercase;
-  display: block;
-  padding: 29px;
   margin: 0;
+}
+
+.section-title-block .button-red {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .title-gray {
@@ -414,6 +425,49 @@ a.common-logo img {
 
 .promo-slider-item.active {
   display: block;
+}
+
+/* Main - breadcrumbs */
+
+.main-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  margin-top: 21px;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.main-breadcrumbs li {
+  margin-right: 41px;
+  position: relative;
+}
+
+.main-breadcrumbs li:nth-child(n+2)::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  left: -24px;
+  background-image: url('../img/icon-right-small.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-breadcrumbs-home {
+  display: block;
+  width: 14px;
+  height: 100%;
+  background-image: url('../img/icon-home.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-breadcrumbs a:hover,
+.main-breadcrumbs a:active {
+  opacity: 0.5;                 /* В стайлгайде отсутствует */
 }
 
 /* Main - products */
