@@ -89,6 +89,9 @@ a.common-logo {
 
 .button-red {
   font-family: "Cuprum", "Arial Narrow", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
   background-color: var(--basic-red);
   color: var(--basic-white);
   border: none;
