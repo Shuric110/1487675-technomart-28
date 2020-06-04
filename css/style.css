@@ -39,6 +39,7 @@
   --services-button-extra: #405069;
 
   --logo-shadow: rgba(0, 0, 0, 0.24);
+  --product-hover-shadow: rgba(0, 0, 0, 0.15);
   --popup-controls: #F1F1F1;
 }
 
@@ -104,8 +105,11 @@ a.common-logo img {
   color: var(--basic-white);
   border: none;
   text-align: center;
-  padding: 10px 35px;
-  min-width: 192px;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-width: 152px;
 }
 
 .button-red:active {
@@ -487,12 +491,60 @@ a.common-logo img {
 
 .product-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 18px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.product-list.product-list-3col {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.product-list.product-list-4col {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.product-card {
+  width: 220px;
+  min-height: 318px;
+  box-sizing: border-box;
+  padding-top: 6px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 21px;
+  border: 1px solid var(--border-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card:hover {
+  box-shadow: 0px 4px 20px var(--product-hover-shadow);
+}
+
+.product-image-box {
+  height: 164px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image-box img {
+  max-height: 100%;
+  width: auto;
 }
 
 .product-card > h4 {
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
+  text-align: center;
+  margin: 0;
+  margin-top: 8px;
+  margin-bottom: auto;
 }
 
 .product-card > p {
@@ -500,11 +552,14 @@ a.common-logo img {
   font-size: 17px;
   text-decoration: line-through;
   color: var(--price-gray);
+  margin: 0;
+  margin-top: 6px;
 }
 
 .product-card > button {
   font-weight: bold;
   font-size: 17px;
+  margin-top: 13px;
 }
 
 /* Main - partners */
@@ -579,6 +634,8 @@ a.common-logo img {
   grid-row: 1;
   display: flex;
   background-color: var(--background-accent2);
+  border-radius: 3px;
+  line-height: 18px;
   min-height: 18px;
   padding: 10px 18px;
 }
@@ -666,21 +723,43 @@ a.sort-direction:active svg {
   text-transform: uppercase;
   font-weight: normal;
   font-size: 13px;
+  line-height: 18px;
   margin: 0;
+  background-color: var(--background-accent2);
+  border-radius: 3px;
+  padding: 10px 18px;
+}
+
+.filter-section fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-bottom: solid 1px var(--border-gray);
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+
+.filter-section fieldset:last-of-type {
+  border-bottom: none;
 }
 
 .filter-section legend {
+  display: block;
   font-weight: bold;
   font-size: 17px;
+  line-height: 30px;
+  padding-bottom: 11px;
+}
+
+.filter-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .filter-section label {
   font-size: 15px;
   text-transform: uppercase;
-}
-
-.filter-section ul {
-  list-style: none;
 }
 
 .filter-section button {
