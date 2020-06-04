@@ -374,7 +374,6 @@ a.common-logo img {
 .promo-block {
   font-family: "Cuprum", "Arial Narrow", sans-serif;
   margin-top: 59px;
-  padding-bottom: 59px;
   display: grid;
   grid-template-columns: 300px 300px 300px;
   grid-gap: 20px;
@@ -617,6 +616,10 @@ a.common-logo img {
   grid-row-gap: 28px;
 }
 
+.popular-products-section {
+  margin-top: 59px;
+}
+
 /* Main - products */
 
 .product-list {
@@ -730,13 +733,48 @@ a.common-logo img {
 
 /* Main - partners */
 
+.partners-section {
+  margin-top: 70px;
+}
+
 .partners-block-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 220px 220px 220px 220px;
+}
+
+.partners-block-list a {
+  box-sizing: border-box;
+  height: 145px;
+  padding: 5px;
+  border: 1px solid var(--border-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners-block-list a:hover {
+  box-shadow: 0px 4px 20px var(--product-hover-shadow);
+}
+
+.partners-block-list a:active {
+  box-shadow: 0px 4px 20px var(--product-hover-shadow);
+  opacity: 0.5;
+}
+
+.partners-block-list img {
+  max-height: 100%;
+  width: auto;
 }
 
 /* Main - services */
 
-.services-block {
+.services-section {
+  margin-top: 70px;
 }
 
 .services-block-list {
