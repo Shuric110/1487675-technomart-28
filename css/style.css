@@ -314,10 +314,6 @@ a.common-logo img {
 }
 
 /* Main */
-.main-breadcrumbs {
-  list-style: none;
-  text-transform: uppercase;
-}
 
 .section-title {
   display: block;
@@ -377,6 +373,27 @@ a.common-logo img {
 
 .promo-block {
   font-family: "Cuprum", "Arial Narrow", sans-serif;
+  margin-top: 59px;
+  padding-bottom: 59px;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-gap: 20px;
+}
+
+.promo-item {
+  min-height: 123px;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 21px;
+  padding-left: 23px;
+  padding-right: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-color: var(--promo-1);
 }
 
 .promo-item > h3 {
@@ -384,6 +401,8 @@ a.common-logo img {
   font-size: 24px;
   line-height: 30px;
   color: var(--basic-white);
+  margin: 0;
+  margin-bottom: auto;
 }
 
 .promo-item > a {
@@ -392,6 +411,10 @@ a.common-logo img {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  display: block;
+  min-width: 95px;
+  padding: 10px 20px;
+  text-align: center;
 }
 
 .promo-item > a:hover {
@@ -402,23 +425,127 @@ a.common-logo img {
   background-color: var(--promo-button-active);
 }
 
-.promo-item {
+.promo-item:nth-of-type(1) {
   background-color: var(--promo-1);
+  background-image: url("../img/icon-promo-1.svg");
+  background-position-x: calc(100% - 43px);
 }
 
-.promo-item:nth-of-type(2) { background-color: var(--promo-2); }
-.promo-item:nth-of-type(3) { background-color: var(--promo-3); }
-.promo-item:nth-of-type(4) { background-color: var(--promo-4); }
-.promo-item:nth-of-type(5) { background-color: var(--promo-5); }
+.promo-item:nth-of-type(2) {
+  background-color: var(--promo-2);
+  background-image: url("../img/icon-promo-2.svg");
+  background-position-x: calc(100% - 31px);
+}
+
+.promo-item:nth-of-type(3) {
+   background-color: var(--promo-3);
+   background-image: url("../img/icon-promo-3.svg");
+   background-position-x: calc(100% - 31px);
+ }
+
+.promo-item:nth-of-type(4) {
+  background-color: var(--promo-4);
+  background-image: url("../img/icon-promo-4.svg");
+  background-position-x: calc(100% - 45px);
+}
+
+.promo-item:nth-of-type(5) {
+  background-color: var(--promo-5);
+  background-image: url("../img/icon-promo-5.svg");
+  background-position-x: calc(100% - 31px);
+}
+
+.promo-slider {
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
+  min-height: 266px;
+  position: relative;
+}
+
+.promo-slider-button {
+  display: block;
+  position: absolute;
+  top: 122px;
+  width: 22px;
+  height: 40px;
+  background: none;
+  border: none;
+}
+
+.promo-slider-button-prev {
+  left: 24px;
+  background-image: url("../img/slider-btn-left.svg");
+}
+
+.promo-slider-button-next {
+  right: 20px;
+  background-image: url("../img/slider-btn-right.svg");
+}
+
+.promo-slider-nav {
+  display: flex;
+  position: absolute;
+  top: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.promo-slider-nav li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.promo-slider-nav button {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  background-image: url("../img/slider-dot.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.promo-slider-nav button.active {
+  background-image: url("../img/slider-dot-active.png");
+}
+
+.promo-slider-button-catalog {
+  position: absolute;
+  left: 24px;
+  bottom: 27px;
+}
 
 .promo-slider-item {
   display: none;
   background-color: var(--promo-slider-alt-background);
   color: var(--basic-white);
+  min-height: 266px;
 }
 
-.promo-slider-item > div {
+.promo-slider-item:nth-child(1) {
+  background-image: url("../img/slider-hammerdrills.jpg");
+}
+
+.promo-slider-item:nth-child(2) {
+  background-image: url("../img/slider-drills.jpg");
+}
+
+.promo-slider-item-header {
   background-color: var(--promo-slider-black-glass);
+  box-sizing: border-box;
+  min-height: 104px;
+  padding-top: 23px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 10px;
+}
+
+.promo-slider-item-header p {
+  margin: 0;
+  margin-top: 5px;
 }
 
 .promo-slider-item h3 {
@@ -426,6 +553,7 @@ a.common-logo img {
   font-size: 36px;
   line-height: 38px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .promo-slider-item p {
@@ -446,6 +574,7 @@ a.common-logo img {
   margin-top: 21px;
   margin-bottom: 20px;
   padding: 0;
+  text-transform: uppercase;
 }
 
 .main-breadcrumbs li {

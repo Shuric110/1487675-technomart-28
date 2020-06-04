@@ -95,20 +95,24 @@
 
             <div class="promo-slider">
               <div class="promo-slider-item active">
-                <div>
+                <div class="promo-slider-item-header">
                   <h3>Перфораторы</h3>
                   <p>Настоящие мужские игрушки</p>
                 </div>
               </div>
               <div class="promo-slider-item">
-                <div>
+                <div class="promo-slider-item-header">
                   <h3>Дрели</h3>
                   <p>Соседям на радость!</p>
                 </div>
               </div>
-              <button type="button" id="promo-slider-button-prev">Предыдущий слайд</button>
-              <button type="button" id="promo-slider-button-next">Следующий слайд</button>
-              <a class="button-red" href="catalog.html">Открыть каталог</a>
+              <button type="button" class="promo-slider-button promo-slider-button-prev"><span class="visually-hidden">Предыдущий слайд</span></button>
+              <button type="button" class="promo-slider-button promo-slider-button-next"><span class="visually-hidden">Следующий слайд</span></button>
+              <ul class="promo-slider-nav">
+                <li><button type="button" class="active"><span class="visually-hidden">Слайд 1</span></button></li>
+                <li><button type="button"><span class="visually-hidden">Слайд 2</span></button></li>
+              </ul>
+              <a class="button-red promo-slider-button-catalog" href="catalog.html">Открыть каталог</a>
             </div>
           </div>
         </section>
