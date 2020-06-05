@@ -313,7 +313,7 @@ a.common-logo img {
   background-color: var(--menu-basic-accent);
 }
 
-/* Main */
+/* Main - common */
 
 .section-title {
   display: block;
@@ -424,31 +424,31 @@ a.common-logo img {
   background-color: var(--promo-button-active);
 }
 
-.promo-item:nth-of-type(1) {
+.promo-item.promo-1 {
   background-color: var(--promo-1);
   background-image: url("../img/icon-promo-1.svg");
   background-position-x: calc(100% - 43px);
 }
 
-.promo-item:nth-of-type(2) {
+.promo-item.promo-2 {
   background-color: var(--promo-2);
   background-image: url("../img/icon-promo-2.svg");
   background-position-x: calc(100% - 31px);
 }
 
-.promo-item:nth-of-type(3) {
+.promo-item.promo-3 {
    background-color: var(--promo-3);
    background-image: url("../img/icon-promo-3.svg");
    background-position-x: calc(100% - 31px);
  }
 
-.promo-item:nth-of-type(4) {
+.promo-item.promo-4 {
   background-color: var(--promo-4);
   background-image: url("../img/icon-promo-4.svg");
   background-position-x: calc(100% - 45px);
 }
 
-.promo-item:nth-of-type(5) {
+.promo-item.promo-5 {
   background-color: var(--promo-5);
   background-image: url("../img/icon-promo-5.svg");
   background-position-x: calc(100% - 31px);
@@ -775,39 +775,105 @@ a.common-logo img {
 
 .services-section {
   margin-top: 70px;
+  padding-bottom: 0;
+}
+
+.services-block-content {
+  margin-top: 67px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .services-block-list {
-  list-style: none;
   font-family: "Cuprum", "Arial Narrow", sans-serif;
   font-weight: bold;
   font-size: 21px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 3px;
+  margin-right: auto;
+  margin-bottom: 50px;
+  width: 240px;
+  position: relative;
 }
 
-.services-block-list li {
-  margin: 1px;  /* Временно! */
+.services-block-list::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 280px;
+  top: calc(50% - 140px);
+  right: 0;
+  background-image: url("../img/services-menu-shadow.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.services-block-list li:not(:last-child) {
+  margin-bottom: 1px;
 }
 
 .services-block-list button {
   color: var(--basic-white);
   background-color: var(--menu-basic);
+  line-height: 30px;
+  text-align: left;
+  cursor: pointer;
   border: none;
   box-shadow: 0px 1px 0px var(--menu-dark), inset 0px 1px 0px var(--services-button-extra);
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 22px;
+  padding-top: 14px;
+  padding-bottom: 17px;
+  padding-right: 35px;
 }
 
-.services-block-list button.active {
+.services-block-list button:hover {
+  background-color: var(--menu-dark);
+}
+
+.services-block-list button.active,
+.services-block-list button:active {
   color: var(--menu-basic);
   background-color: var(--basic-white);
   box-shadow: 0px 1px 0px var(--basic-white);
 }
 
 .services-block-page {
-
+  width: 620px;
+  min-height: 267px;
+  padding-bottom: 20px;
   display: none;
 }
 
 .services-block-page.active {
   display: block;
+}
+
+.services-block-page .common-block-title {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.services-block-page.page-1 {
+  background-image: url("../img/services-delivery.png");
+  background-repeat: no-repeat;
+  background-position: 100% 22px;
+}
+
+.services-block-page.page-2 {
+  background-image: url("../img/services-warranty.png");
+  background-repeat: no-repeat;
+  background-position: 100% 4px;
+}
+
+.services-block-page.page-3 {
+  background-image: url("../img/services-credit.png");
+  background-repeat: no-repeat;
+  background-position: 100% 2px;
 }
 
 /* Main - about & contacts */
