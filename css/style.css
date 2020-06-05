@@ -433,6 +433,26 @@ a.main-header-account-exit {
   margin-top: 25px;
 }
 
+.new-ribbon::before {
+  content: "NEW";
+  font-family: "Cuprum", "Arial Narrow", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+
+  display: block;
+  position: absolute;
+  right: -27px;
+  top: 7px;
+  padding-top: 8px;
+  padding-bottom: 4px;
+  width: 100px;
+  height: 18px;
+  text-align: center;
+  transform: rotate(45deg);
+}
+
 /* Main - promo-block */
 
 .promo-block {
@@ -453,6 +473,8 @@ a.main-header-account-exit {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
+  overflow: hidden;
 
   background-repeat: no-repeat;
   background-position-y: center;
@@ -716,6 +738,8 @@ a.main-header-account-exit {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .product-card:hover {
