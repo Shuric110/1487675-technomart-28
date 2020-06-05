@@ -160,7 +160,7 @@
         <section class="partners-section">
           <div class="section-title-block background-accent2">
             <h2 class="section-title title-gray">Популярные производители:</h2>
-            <a class="button-red" href="blank.html">Все популярные производители</a>
+            <a class="button-red" href="blank.html">Все производители</a>
           </div>
           <ul class="partners-block-list">
             <li><a href="blank.html"><img src="img/partners-1.png" width="126" height="37" alt="Bosch"></a></li>
@@ -316,23 +316,27 @@
       </div>
     </footer>
 
-    <section class="popup">
-      <h2 class="visually-hidden">Карта проезда</h2>
-      <img src="img/popup-map.png" width="970" height="477" alt="Карта проезда">
-      <button class="popup-close-button" type="button">Закрыть</button>
-    </section>
+    <div class="popup-wrapper">
+      <section class="popup popup-map">
+        <h2 class="visually-hidden">Карта проезда</h2>
+        <img src="img/popup-map.png" width="970" height="477" alt="Карта проезда">
+        <button class="popup-close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
+      </section>
 
-    <section class="popup">
-      <h2 class="visually-hidden">Обратная связь</h2>
-      <form method="post" action="https://echo.htmlacademy.ru/">
-        <label>Ваше имя: <input type="text" name="name" placeholder="Имя Фамилия"></label>
-        <label>Ваш e-mail: <input type="email" name="email" placeholder="email@example.com"></label>
-        <label>Текст письма: <textarea name="msg" placeholder="В свободной форме"></textarea></label>
-        <div class="popup-controls">
-          <button class="button-red" type="submit">Отправить</button>
-        </div>
-      </form>
-      <button class="popup-close-button" type="button">Закрыть</button>
-    </section>
+      <section class="popup popup-feedback">
+        <h2 class="visually-hidden">Обратная связь</h2>
+        <form method="post" action="https://echo.htmlacademy.ru/">
+          <div class="popup-feedback-inner popup-feedback-inputs">
+            <label class="popup-feedback-label-input">Ваше имя: <input type="text" name="name" placeholder="Имя Фамилия"></label>
+            <label class="popup-feedback-label-input">Ваш e-mail: <input type="email" name="email" placeholder="email@example.com"></label>
+            <label class="popup-feedback-label-textarea">Текст письма: <textarea name="msg" placeholder="В свободной форме"></textarea></label>
+          </div>
+          <div class="popup-controls popup-feedback-inner">
+            <button class="button-red" type="submit">Отправить</button>
+          </div>
+        </form>
+        <button class="popup-close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
+      </section>
+    </div>
   </body>
 </html>
