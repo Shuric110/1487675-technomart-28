@@ -182,6 +182,13 @@ a.common-logo img {
   border: none;
   outline: none;
   background-color: var(--menu-dark);
+  line-height: 24px;
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 42px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-right: 30px;
 }
 
 .main-header-search-input::placeholder,
@@ -196,6 +203,17 @@ a.common-logo img {
 
 .main-header-widgets {
   display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-header-widgets a {
+  display: block;
+  padding-left: 35px;
+  padding-right: 20px;
+  padding-top: 9px;
+  padding-bottom: 9px;
 }
 
 .main-header-widgets a:active {
@@ -205,6 +223,9 @@ a.common-logo img {
 
 .main-header-checkout {
   background-color: var(--basic-green);
+  text-align: center;
+  padding: 9px 12px;
+  min-width: 126px;
 }
 
 .main-header-checkout:hover {
@@ -217,11 +238,12 @@ a.common-logo img {
 
 .main-header-middle {
   margin-top: 46px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
 }
 
-.main-header-middle > div {
+.main-header-middle-column {
   flex-basis: 300px;
 }
 
@@ -229,6 +251,7 @@ a.common-logo img {
   color: var(--basic-red);
   font-style: italic;
   font-size: 16px;
+  margin: 0;
 }
 
 .main-header-address {
@@ -248,10 +271,29 @@ a.common-logo img {
 
 .main-header-account {
   font-size: 21px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .main-header-account a {
   color: var(--basic-black);
+  background-color: var(--basic-white);
+  padding: 12px 25px;
+  margin-left: 10px;
+}
+
+a.main-header-account-username {
+  padding-left: 15px;
+  padding-right: 5px;
+}
+
+a.main-header-account-exit {
+  padding-left: 5px;
+  padding-right: 15px;
+  margin-left: 0;
 }
 
 .main-header-account a:hover {
@@ -285,6 +327,17 @@ a.common-logo img {
 .main-header-account-links {
   font-size: 16px;
   color: var(--menu-basic);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.main-header-account-links li:not(:first-child)::before  {
+  content: "\2022";
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .main-header-account-links a:hover {
