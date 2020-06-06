@@ -1109,7 +1109,6 @@ a.sort-direction:active svg {
   margin: 0;
   border: none;
   border-bottom: solid 1px var(--border-gray);
-  padding-top: 15px;
   padding-bottom: 25px;
 }
 
@@ -1122,6 +1121,8 @@ a.sort-direction:active svg {
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
+  text-transform: uppercase;
+  padding-top: 15px;
   padding-bottom: 11px;
 }
 
@@ -1131,8 +1132,13 @@ a.sort-direction:active svg {
   margin: 0;
 }
 
+.filter-section li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
 .filter-section label {
   font-size: 15px;
+  line-height: 19px;
   text-transform: uppercase;
 }
 
