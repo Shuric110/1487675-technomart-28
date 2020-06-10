@@ -15,11 +15,17 @@
           <form class="main-header-search-form" method="get" action="https://echo.htmlacademy.ru/">
             <label for="input-search" class="visually-hidden">Поиск:</label>
             <input id="input-search" class="main-header-search-input" type="text" name="search" placeholder="Поиск:">
-            <input class="visually-hidden" type="submit" value="Искать">
+            <button class="main-header-search-button" type="submit">
+              <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586 15.586 17l-3.542-3.542A7.465 7.465 0 017.5 15 7.5 7.5 0 1115
+                  7.5c0 1.643-.542 3.24-1.542 4.544zM7.5 2A5.506 5.506 0 002 7.5 5.506 5.506 0 007.5 13c3.032 0 5.5-2.468 5.5-5.5C13 4.467 10.532 2 7.5 2z" />
+              </svg>
+              <span class="visually-hidden">Искать</span>
+            </button>
           </form>
           <ul class="main-header-widgets">
-            <li><a href="blank.html">Закладки: <output>0</output></a></li>
-            <li><a href="blank.html">Корзина: <output>0</output></a></li>
+            <li><a class="main-header-widget-bookmarks" href="blank.html">Закладки: <output>0</output></a></li>
+            <li><a class="main-header-widget-cart" href="blank.html">Корзина: <output>0</output></a></li>
           </ul>
           <a class="main-header-checkout" href="blank.html">Оформить заказ</a>
         </div>
@@ -33,9 +39,11 @@
               и инструментов для ремонта
             </h1>
           </div>
-          <div class="main-header-middle-column">
+          <div class="main-header-middle-column main-header-middle-column-address">
             <address class="main-header-address">
-              <a href="tel:+7-812-555-05-55">+7 (812) 555-05-55</a>
+              <div class="main-header-phone-box">
+                <a href="tel:+7-812-555-05-55">+7 (812) 555-05-55</a>
+              </div>
               <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </address>
           </div>
@@ -94,13 +102,13 @@
             </div>
 
             <div class="promo-slider">
-              <div class="promo-slider-item active">
+              <div class="promo-slider-item slide-1 active">
                 <div class="promo-slider-item-header">
                   <h3>Перфораторы</h3>
                   <p>Настоящие мужские игрушки</p>
                 </div>
               </div>
-              <div class="promo-slider-item">
+              <div class="promo-slider-item slide-2">
                 <div class="promo-slider-item-header">
                   <h3>Дрели</h3>
                   <p>Соседям на радость!</p>
@@ -176,7 +184,7 @@
       </div>
 
       <section class="common-block background-accent services-section">
-        <div class="common-wrapper">
+        <div class="common-wrapper services-section-inner">
           <h2 class="common-block-title">Сервисы</h2>
           <p>
             Хороший интернет-магазин отличается от плохого не только ценами!<br>
