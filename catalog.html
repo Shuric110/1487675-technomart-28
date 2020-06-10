@@ -11,15 +11,21 @@
     <header class="main-header">
       <div class="main-header-top">
         <div class="common-wrapper main-header-top-container">
-          <a class="common-logo main-header-top-logo" href="index.html"><img src="img/logo-technomart.svg" width="108" height="18" alt="Техномарт"></a>
+          <a href="index.html" class="common-logo main-header-top-logo"><img src="img/logo-technomart.svg" width="108" height="18" alt="Техномарт"></a>
           <form class="main-header-search-form" method="get" action="https://echo.htmlacademy.ru/">
             <label for="input-search" class="visually-hidden">Поиск:</label>
             <input id="input-search" class="main-header-search-input" type="text" name="search" placeholder="Поиск:">
-            <input class="visually-hidden" type="submit" value="Искать">
+            <button class="main-header-search-button" type="submit">
+              <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586 15.586 17l-3.542-3.542A7.465 7.465 0 017.5 15 7.5 7.5 0 1115
+                  7.5c0 1.643-.542 3.24-1.542 4.544zM7.5 2A5.506 5.506 0 002 7.5 5.506 5.506 0 007.5 13c3.032 0 5.5-2.468 5.5-5.5C13 4.467 10.532 2 7.5 2z" />
+              </svg>
+              <span class="visually-hidden">Искать</span>
+            </button>
           </form>
           <ul class="main-header-widgets">
-            <li><a href="blank.html">Закладки: <output>0</output></a></li>
-            <li><a href="blank.html">Корзина: <output>0</output></a></li>
+            <li><a class="main-header-widget-bookmarks" href="blank.html">Закладки: <output>0</output></a></li>
+            <li><a class="main-header-widget-cart active" href="blank.html">Корзина: <output>10</output></a></li>
           </ul>
           <a class="main-header-checkout" href="blank.html">Оформить заказ</a>
         </div>
@@ -33,9 +39,11 @@
               и инструментов для ремонта
             </h1>
           </div>
-          <div class="main-header-middle-column">
+          <div class="main-header-middle-column main-header-middle-column-address">
             <address class="main-header-address">
-              <a href="tel:+7-812-555-05-55">+7 (812) 555-05-55</a>
+              <div class="main-header-phone-box">
+                <a href="tel:+7-812-555-05-55">+7 (812) 555-05-55</a>
+              </div>
               <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </address>
           </div>
@@ -46,7 +54,7 @@
                   <path d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979
                     2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39C-.026 14.902 0 18 0 18h20s.025-3.099-2.119-3.834z" />
                 </svg>
-                Равшан Джамшутович
+                <div>Равшан Джамшутович</div>
               </a>
               <a class="main-header-account-exit" href="blank.html">
                 <svg width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -256,7 +264,7 @@
     <footer class="main-footer">
       <div class="common-wrapper main-footer-top">
         <div class="main-footer-top-company">
-          <a class="common-logo main-footer-logo"><img src="img/logo-technomart.svg" width="138" height="23" alt="Техномарт"></a>
+          <a href="index.html" class="common-logo main-footer-logo"><img src="img/logo-technomart.svg" width="138" height="23" alt="Техномарт"></a>
           <address class="main-footer-address">
             <p>
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
