@@ -202,42 +202,55 @@
             <form method="post" action="https://echo.htmlacademy.ru/">
               <fieldset>
                 <legend>Цена:</legend>
-                <!-- Здесь будет фильтр по цене -->
+                <div class="filter-range">
+                  <div class="filter-range-control">
+                    <div class="filter-range-control-scale">
+                      <div class="filter-range-control-bar"></div>
+                      <div class="filter-range-control-knob min"></div>
+                      <div class="filter-range-control-knob max"></div>
+                    </div>
+                  </div>
+                  <div class="filter-range-inputs">
+                    <input type="text" name="min-price" value="0">
+                    —
+                    <input type="text" name="max-price" value="30000">
+                  </div>
+                </div>
               </fieldset>
-              <fieldset>
+              <fieldset class="filter-vendors">
                 <legend>Производители:</legend>
                 <ul>
                   <li>
-                    <input type="checkbox" id="filter-vendor-1" name="vendor" value="Bosch">
+                    <input class="filter-section-checkbox visually-hidden" type="checkbox" id="filter-vendor-1" name="vendor" value="Bosch" checked>
                     <label for="filter-vendor-1">Bosch</label>
                   </li>
                   <li>
-                    <input type="checkbox" id="filter-vendor-2" name="vendor" value="Интерскол">
+                    <input class="filter-section-checkbox visually-hidden" type="checkbox" id="filter-vendor-2" name="vendor" value="Интерскол">
                     <label for="filter-vendor-2">Интерскол</label>
                   </li>
                   <li>
-                    <input type="checkbox" id="filter-vendor-3" name="vendor" value="Makita">
+                    <input class="filter-section-checkbox visually-hidden" type="checkbox" id="filter-vendor-3" name="vendor" value="Makita" checked>
                     <label for="filter-vendor-3">Makita</label>
                   </li>
                   <li>
-                    <input type="checkbox" id="filter-vendor-4" name="vendor" value="DeWALT">
+                    <input class="filter-section-checkbox visually-hidden" type="checkbox" id="filter-vendor-4" name="vendor" value="DeWALT">
                     <label for="filter-vendor-4">DeWALT</label>
                   </li>
                   <li>
-                    <input type="checkbox" id="filter-vendor-5" name="vendor" value="Hitachi">
+                    <input class="filter-section-checkbox visually-hidden" type="checkbox" id="filter-vendor-5" name="vendor" value="Hitachi">
                     <label for="filter-vendor-5">Hitachi</label>
                   </li>
                 </ul>
               </fieldset>
-              <fieldset>
+              <fieldset class="filter-power">
                 <legend>Питание:</legend>
                 <ul>
                   <li>
-                    <input type="radio" id="filter-power-1" name="power" value="battery">
+                    <input class="filter-section-radio visually-hidden" type="radio" id="filter-power-1" name="power" value="battery" checked>
                     <label for="filter-power-1">Аккумуляторные</label>
                   </li>
                   <li>
-                    <input type="radio" id="filter-power-2" name="power" value="ac">
+                    <input class="filter-section-radio visually-hidden" type="radio" id="filter-power-2" name="power" value="ac">
                     <label for="filter-power-2">Сетевые</label>
                   </li>
                 </ul>
@@ -329,8 +342,8 @@
       </div>
     </footer>
 
-    <div class="popup-wrapper">
-      <section class="popup popup-cartinfo">
+    <div class="popup-wrapper active">
+      <section class="popup popup-cartinfo active">
         <h2 class="visually-hidden">Информация</h2>
         <div class="popup-cartinfo-inner">
           <p class="success-message">Товар добавлен в корзину!</p>
