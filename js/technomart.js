@@ -98,6 +98,80 @@
 
   };
 
+  var initSlider = function (slider) {
+    var slides = slider.querySelectorAll('.common-slider-slide');
+    var switches = slider.querySelectorAll('.common-slider-switch');
+    var btnPrev = slider.querySelector('.common-slider-prev');
+    var btnNext = slider.querySelector('.common-slider-next');
+
+    var currentSlideNo = 0;
+
+    var showSlide = function (slideNo) {
+      if (slideNo !== currentSlideNo) {
+        slides[currentSlideNo].classList.remove('active');
+        if (switches[currentSlideNo]) {
+          switches[currentSlideNo].classList.remove('active');
+        }
+        currentSlideNo = slideNo;
+        slides[currentSlideNo].classList.add('active');
+        if (switches[currentSlideNo]) {
+          switches[currentSlideNo].classList.add('active');
+        }
+      }
+    };
+
+    var addSwitchEvent = function (sw, slideNo) {
+      sw.addEventListener('click', function () {
+        showSlide(slideNo)
+      });
+    };
+
+    for (var i = 0; i < slides.length; i++) {
+      if (slides[i].classList.contains('active')) {
+        currentSlideNo = i;
+        break;
+      }
+    }
+
+    for (var i = 0; i < slides.length; i++) {
+      if (i == currentSlideNo) {
+        slides[i].classList.add('active');
+        if (switches[i]) {
+          switches[i].classList.add('active');
+        }
+      } else {
+        slides[i].classList.remove('active');
+        if (switches[i]) {
+          switches[i].classList.remove('active');
+        }
+      }
+    }
+
+    if (btnPrev) {
+      btnPrev.addEventListener('click', function () {
+        var newSlideNo = currentSlideNo-1;
+        if (newSlideNo < 0) {
+          newSlideNo = slides.length-1;
+        }
+        showSlide(newSlideNo);
+      });
+    }
+
+    if (btnNext) {
+      btnNext.addEventListener('click', function () {
+        var newSlideNo = currentSlideNo+1;
+        if (newSlideNo >= slides.length) {
+          newSlideNo = 0;
+        }
+        showSlide(newSlideNo);
+      });
+    }
+
+    for (var i = 0; i < slides.length && i < switches.length; i++) {
+      addSwitchEvent(switches[i], i);
+    }
+  };
+
   window.addEventListener('load', function () {
     popupWrapper = document.querySelector('.popup-wrapper');
     popupWrapper.addEventListener('click', handlePopupWrapperClick);
@@ -107,6 +181,11 @@
     makePopupLink('button-buy', 'popup-cartinfo');
 
     makeCardButtonsPopup();
+
+    var sliders = document.querySelectorAll('.common-slider');
+    for (var i = 0; i < sliders.length; i++) {
+      initSlider(sliders[i]);
+    }
   });
 
 })();
