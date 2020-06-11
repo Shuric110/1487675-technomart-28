@@ -610,6 +610,7 @@ a.main-header-account-exit {
 
   display: block;
   position: absolute;
+  z-index: 1;
   right: -27px;
   top: 8px;
   padding-top: 8px;
@@ -920,6 +921,7 @@ a.main-header-account-exit {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .product-image-box img {
@@ -1783,6 +1785,7 @@ a.sort-direction:active svg {
   background-image: url("../img/icon-cart.svg");
   background-position: center;
   background-repeat: no-repeat;
+  opacity: 0.3;
 }
 
 .button-bookmark {
@@ -1814,9 +1817,16 @@ a.sort-direction:active svg {
 
 .popup-product-hover {
   height: 164px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding-top: 32px;
+  padding-right: 2px;
   display: none;
   flex-direction: column;
   align-items: center;
+  position: absolute;
+  background-color: var(--basic-white);
 }
 
 .popup-product-hover.active {
