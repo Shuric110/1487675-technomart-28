@@ -114,17 +114,18 @@
 
     var currentSlideNo = 0;
 
+    var setSlideActive = function (slideNo, isActive) {
+      slides[slideNo].classList.toggle('active', isActive);
+      if (switches[slideNo]) {
+        switches[slideNo].classList.toggle('active', isActive);
+      }
+    };
+
     var showSlide = function (slideNo) {
       if (slideNo !== currentSlideNo) {
-        slides[currentSlideNo].classList.remove('active');
-        if (switches[currentSlideNo]) {
-          switches[currentSlideNo].classList.remove('active');
-        }
+        setSlideActive(currentSlideNo, false);
         currentSlideNo = slideNo;
-        slides[currentSlideNo].classList.add('active');
-        if (switches[currentSlideNo]) {
-          switches[currentSlideNo].classList.add('active');
-        }
+        setSlideActive(currentSlideNo, true);
       }
     };
 
@@ -136,45 +137,28 @@
     }
 
     for (i = 0; i < slides.length; i++) {
-      if (i == currentSlideNo) {
-        slides[i].classList.add('active');
-        if (switches[i]) {
-          switches[i].classList.add('active');
-        }
-      } else {
-        slides[i].classList.remove('active');
-        if (switches[i]) {
-          switches[i].classList.remove('active');
-        }
+      setSlideActive(i, i === currentSlideNo);
+      if (switches[i]) {
+        switches[i].slideNo = i;
       }
-    }
-
-    for (i = 0; i < slides.length && i < switches.length; i++) {
-      switches[i].slideNo = i;
     }
 
     if (btnPrev) {
       btnPrev.addEventListener('click', function () {
-        var newSlideNo = currentSlideNo - 1;
-        if (newSlideNo < 0) {
-          newSlideNo = slides.length - 1;
-        }
+        var newSlideNo = (currentSlideNo === 0) ? slides.length - 1 : currentSlideNo - 1;
         showSlide(newSlideNo);
       });
     }
 
     if (btnNext) {
       btnNext.addEventListener('click', function () {
-        var newSlideNo = currentSlideNo + 1;
-        if (newSlideNo >= slides.length) {
-          newSlideNo = 0;
-        }
+        var newSlideNo = (currentSlideNo === slides.length-1) ? 0 : currentSlideNo + 1;
         showSlide(newSlideNo);
       });
     }
 
     slider.addEventListener('click', function (evt) {
-      if (evt.target.classList.contains('common-slider-switch') && typeof evt.target.slideNo != 'undefined') {
+      if (evt.target.classList.contains('common-slider-switch') && typeof evt.target.slideNo !== 'undefined') {
         showSlide(evt.target.slideNo);
       }
     });
