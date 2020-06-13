@@ -4,9 +4,6 @@
   var popupWrapper;
   var openedPopups = [];
 
-  var closePopup;
-  var closeLastPopup;
-
   var handleCloseButtonClick = function () {
     closePopup(this.dataPopup);
   };
@@ -23,7 +20,7 @@
     }
   };
 
-  closeLastPopup = function () {
+  var closeLastPopup = function () {
     var lastPopup = openedPopups.pop();
     if (lastPopup) {
       closePopup(lastPopup);
@@ -33,7 +30,7 @@
     }
   };
 
-  closePopup = function (popup) {
+  var closePopup = function (popup) {
     var closeButton = popup.querySelector('.popup-close-button');
     if (closeButton) {
       closeButton.removeEventListener('click', handleCloseButtonClick);
@@ -71,8 +68,8 @@
   };
 
   var makePopupLink = function (activatorClass, popupClass) {
-    var activator = document.querySelector('.'+activatorClass);
-    var popup = document.querySelector('.'+popupClass);
+    var activator = document.querySelector('.' + activatorClass);
+    var popup = document.querySelector('.' + popupClass);
     if (activator && popup) {
       activator.addEventListener('click', function (evt) {
         evt.preventDefault();
@@ -89,29 +86,24 @@
       return;
     }
 
-    var handleMouseOut = function (evt) {
-      productHoverPopup.classList.remove('active');
-
-      target.removeEventListener('mouseout', handleMouseOut);
+    var onMouseLeave = function (evt) {
+      if (evt.target.classList.contains('product-card')) {
+        productHoverPopup.classList.remove('active');
+      }
     };
 
-    var handleMouseOver = function (evt) {
-      var target = evt.target;
-      while (target && !target.classList.contains('product-card') && target !== productContainer) {
-        target = target.parentElement;
-      }
-      if (target.classList.contains('product-card')) {
-        var cardImageBox = target.querySelector('.product-image-box');
+    var onMouseEnter = function (evt) {
+      if (evt.target.classList.contains('product-card')) {
+        var cardImageBox = evt.target.querySelector('.product-image-box');
         if (cardImageBox) {
           cardImageBox.appendChild(productHoverPopup);
           productHoverPopup.classList.add('active');
         }
-        target.addEventListener('mouseout', handleMouseOut);
       }
     };
 
-    productContainer.addEventListener('mouseover', handleMouseOver);
-
+    productContainer.addEventListener('mouseenter', onMouseEnter, true);
+    productContainer.addEventListener('mouseleave', onMouseLeave, true);
   };
 
   var initSlider = function (slider) {
@@ -136,12 +128,6 @@
       }
     };
 
-    var addSwitchEvent = function (sw, slideNo) {
-      sw.addEventListener('click', function () {
-        showSlide(slideNo)
-      });
-    };
-
     for (var i = 0; i < slides.length; i++) {
       if (slides[i].classList.contains('active')) {
         currentSlideNo = i;
@@ -149,7 +135,7 @@
       }
     }
 
-    for (var i = 0; i < slides.length; i++) {
+    for (i = 0; i < slides.length; i++) {
       if (i == currentSlideNo) {
         slides[i].classList.add('active');
         if (switches[i]) {
@@ -163,11 +149,15 @@
       }
     }
 
+    for (i = 0; i < slides.length && i < switches.length; i++) {
+      switches[i].slideNo = i;
+    }
+
     if (btnPrev) {
       btnPrev.addEventListener('click', function () {
-        var newSlideNo = currentSlideNo-1;
+        var newSlideNo = currentSlideNo - 1;
         if (newSlideNo < 0) {
-          newSlideNo = slides.length-1;
+          newSlideNo = slides.length - 1;
         }
         showSlide(newSlideNo);
       });
@@ -175,7 +165,7 @@
 
     if (btnNext) {
       btnNext.addEventListener('click', function () {
-        var newSlideNo = currentSlideNo+1;
+        var newSlideNo = currentSlideNo + 1;
         if (newSlideNo >= slides.length) {
           newSlideNo = 0;
         }
@@ -183,9 +173,11 @@
       });
     }
 
-    for (var i = 0; i < slides.length && i < switches.length; i++) {
-      addSwitchEvent(switches[i], i);
-    }
+    slider.addEventListener('click', function (evt) {
+      if (evt.target.classList.contains('common-slider-switch') && typeof evt.target.slideNo != 'undefined') {
+        showSlide(evt.target.slideNo);
+      }
+    });
   };
 
   var makeFeedbackValidator = function () {
