@@ -31,13 +31,13 @@
   };
 
   var closePopup = function (popup) {
-    var closeButton = popup.querySelector('.popup-close-button');
-    if (closeButton) {
-      closeButton.removeEventListener('click', handleCloseButtonClick);
+    var closeButtons = popup.querySelectorAll('.popup-close');
+    for (var i = 0; i < closeButtons.length; i++) {
+      closeButtons[i].removeEventListener('click', handleCloseButtonClick);
     }
 
     popup.classList.remove('active');
-    popup.classList.remove("popup-error");
+    popup.classList.remove('popup-error');
 
     var i = openedPopups.indexOf(popup);
     if (i >= 0) {
@@ -54,10 +54,10 @@
     if (popup.classList.contains('active')) return;
 
     popup.classList.add('active');
-    var closeButton = popup.querySelector('.popup-close-button');
-    if (closeButton) {
-      closeButton.dataPopup = popup;
-      closeButton.addEventListener('click', handleCloseButtonClick);
+    var closeButtons = popup.querySelectorAll('.popup-close');
+    for (var i = 0; i < closeButtons.length; i++) {
+      closeButtons[i].dataPopup = popup;
+      closeButtons[i].addEventListener('click', handleCloseButtonClick);
     }
     openedPopups.push(popup);
 
@@ -68,42 +68,16 @@
   };
 
   var makePopupLink = function (activatorClass, popupClass) {
-    var activator = document.querySelector('.' + activatorClass);
+    var activators = document.querySelectorAll('.' + activatorClass);
     var popup = document.querySelector('.' + popupClass);
-    if (activator && popup) {
-      activator.addEventListener('click', function (evt) {
-        evt.preventDefault();
-        openPopup(popup);
-      });
-    }
-  };
-
-  var makeCardButtonsPopup = function () {
-    var productContainer = document.querySelector('.product-list');
-    var productHoverPopup = document.querySelector('.popup-product-hover');
-
-    if (!productContainer || !productHoverPopup) {
-      return;
-    }
-
-    var onMouseLeave = function (evt) {
-      if (evt.target.classList.contains('product-card')) {
-        productHoverPopup.classList.remove('active');
+    if (popup) {
+      for (var i = 0; i < activators.length; i++) {
+        activators[i].addEventListener('click', function (evt) {
+          evt.preventDefault();
+          openPopup(popup);
+        });
       }
-    };
-
-    var onMouseEnter = function (evt) {
-      if (evt.target.classList.contains('product-card')) {
-        var cardImageBox = evt.target.querySelector('.product-image-box');
-        if (cardImageBox) {
-          cardImageBox.appendChild(productHoverPopup);
-          productHoverPopup.classList.add('active');
-        }
-      }
-    };
-
-    productContainer.addEventListener('mouseenter', onMouseEnter, true);
-    productContainer.addEventListener('mouseleave', onMouseLeave, true);
+    }
   };
 
   var initSlider = function (slider) {
@@ -193,7 +167,7 @@
     makePopupLink('contacts-block-feedback', 'popup-feedback');
     makePopupLink('button-buy', 'popup-cartinfo');
 
-    makeCardButtonsPopup();
+//    makeCardButtonsPopup();
 
     makeFeedbackValidator();
 

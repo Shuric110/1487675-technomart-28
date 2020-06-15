@@ -3,10 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
-    <link href="css/fonts.css" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <script src="js/technomart.js"></script>
   </head>
   <body>
     <header class="main-header">
@@ -43,21 +41,21 @@
           <div class="main-header-middle-column main-header-middle-column-address">
             <address class="main-header-address">
               <div class="main-header-phone-box">
-                <a href="tel:+7-812-555-05-55">+7 (812) 555-05-55</a>
+                <a class="main-header-phone-link" href="tel:+7-812-555-05-55">+7 (812) 555-05-55</a>
               </div>
               <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </address>
           </div>
           <div class="main-header-middle-column">
             <ul class="main-header-account">
-              <li><a class="main-header-account-login" href="blank.html">
+              <li><a class="main-header-account-widget main-header-account-login" href="blank.html">
                 <svg width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14.167 8.5L5.714 0v6H0v5h5.714v6l8.453-8.5z" /><path d="M16.177 15.01H11.39V17h4.787c2.074 0 2.861-1.81 2.885-3.026V3.028C19.038
                   1.811 18.252 0 16.177 0H11.39v1.99h4.787c.8 0 .945.681.962 1.057v10.904c-.016.376-.163 1.059-.962 1.059z" />
                 </svg>
                 Войти
               </a></li>
-              <li><a href="blank.html">Регистрация</a></li>
+              <li><a class="main-header-account-widget" href="blank.html">Регистрация</a></li>
             </ul>
           </div>
         </div>
@@ -82,24 +80,24 @@
           <h2 class="visually-hidden">Предлагаем вам</h2>
           <div class="promo-block">
             <div class="promo-item promo-1 new-ribbon">
-              <h3>Материалы</h3>
-              <a href="blank.html">на любой вкус</a>
+              <h3 class="promo-item-header">Материалы</h3>
+              <a class="promo-item-button" href="blank.html">на любой вкус</a>
             </div>
             <div class="promo-item promo-2">
-              <h3>Инструмент</h3>
-              <a href="blank.html">на все случаи</a>
+              <h3 class="promo-item-header">Инструмент</h3>
+              <a class="promo-item-button" href="blank.html">на все случаи</a>
             </div>
             <div class="promo-item promo-3">
-              <h3>Техника</h3>
-              <a href="blank.html">для стройки</a>
+              <h3 class="promo-item-header">Техника</h3>
+              <a class="promo-item-button" href="blank.html">для стройки</a>
             </div>
             <div class="promo-item promo-4">
-              <h3>Скидки 50%</h3>
-              <a href="blank.html">на 350 товаров</a>
+              <h3 class="promo-item-header">Скидки 50%</h3>
+              <a class="promo-item-button" href="blank.html">на 350 товаров</a>
             </div>
             <div class="promo-item promo-5">
-              <h3>Доставка</h3>
-              <a href="blank.html">бесплатно</a>
+              <h3 class="promo-item-header">Доставка</h3>
+              <a class="promo-item-button" href="blank.html">бесплатно</a>
             </div>
 
             <div class="promo-slider common-slider">
@@ -135,33 +133,49 @@
             <li class="product-card">
               <div class="product-image-box">
                 <img src="img/goods-bfg9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
+                <div class="product-hover">
+                  <button class="button-buy" type="button">Купить</button>
+                  <button class="button-bookmark" type="button">В закладки</button>
+                </div>
               </div>
-              <h4>Перфоратор BOSCH BFG 9000</h4>
-              <p>32500 р.</p>
-              <button>25500 р.</button>
+              <h4 class="product-card-header">Перфоратор BOSCH BFG 9000</h4>
+              <p class="product-card-oldprice">32500 р.</p>
+              <button class="product-card-button">25500 р.</button>
             </li>
             <li class="product-card new-ribbon">
               <div class="product-image-box">
                 <img src="img/goods-bfg3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+                <div class="product-hover">
+                  <button class="button-buy" type="button">Купить</button>
+                  <button class="button-bookmark" type="button">В закладки</button>
+                </div>
               </div>
-              <h4>Перфоратор BOSCH BFG 3000</h4>
-              <p>22500 р.</p>
-              <button>15500 р.</button>
+              <h4 class="product-card-header">Перфоратор BOSCH BFG 3000</h4>
+              <p class="product-card-oldprice">22500 р.</p>
+              <button class="product-card-button">15500 р.</button>
             </li>
             <li class="product-card">
               <div class="product-image-box">
                 <img src="img/goods-bfg6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                <div class="product-hover">
+                  <button class="button-buy" type="button">Купить</button>
+                  <button class="button-bookmark" type="button">В закладки</button>
+                </div>
               </div>
-              <h4>Перфоратор BOSCH BFG 6000</h4>
-              <p>30500 р.</p>
-              <button>25500 р.</button>
+              <h4 class="product-card-header">Перфоратор BOSCH BFG 6000</h4>
+              <p class="product-card-oldprice">30500 р.</p>
+              <button class="product-card-button">25500 р.</button>
             </li>
             <li class="product-card new-ribbon">
               <div class="product-image-box">
                 <img src="img/goods-bfg2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+                <div class="product-hover">
+                  <button class="button-buy" type="button">Купить</button>
+                  <button class="button-bookmark" type="button">В закладки</button>
+                </div>
               </div>
-              <h4>Перфоратор BOSCH BFG 2000</h4>
-              <button>12500 р.</button>
+              <h4 class="product-card-header">Перфоратор BOSCH BFG 2000</h4>
+              <button class="product-card-button">12500 р.</button>
             </li>
           </ul>
         </section>
@@ -243,7 +257,7 @@
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
           </ul>
-          <a class="button-red" href="blank.html">Подробнее о компании</a>
+          <a class="about-block-button button-red" href="blank.html">Подробнее о компании</a>
         </section>
         <section class="common-block contacts-block">
           <h2 class="common-block-title">Контакты</h2>
@@ -252,7 +266,7 @@
             заехав в наш офис:
           </p>
           <a href="https://goo.gl/maps/KQpbEU8k88gvGhFi9"><img class="contacts-block-map" src="img/contacts-map.png" width="300" height="158" alt="Г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></a>
-          <a class="button-red contacts-block-feedback" href="blank.html">Заблудились? Напишите нам!</a>
+          <a class="contacts-block-button button-red contacts-block-feedback" href="blank.html">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </main>
@@ -284,7 +298,7 @@
       </div>
       <div class="main-footer-bottom">
         <div class="common-wrapper main-footer-bottom-container">
-          <p>
+          <p class="main-footer-copyright">
             © 2010–2019 Компания «Техномарт»<br>
             Все права защищены
           </p>
@@ -329,22 +343,22 @@
       <section class="popup popup-map">
         <h2 class="visually-hidden">Карта проезда</h2>
         <img src="img/popup-map.png" width="970" height="477" alt="Карта проезда">
-        <button class="popup-close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
+        <button class="popup-close-button popup-close" type="button"><span class="visually-hidden">Закрыть</span></button>
       </section>
 
       <section class="popup popup-feedback">
         <h2 class="visually-hidden">Обратная связь</h2>
         <form method="post" action="https://echo.htmlacademy.ru/">
-          <div class="popup-feedback-inner popup-feedback-inputs">
-            <label class="popup-feedback-label-input">Ваше имя: <input type="text" name="name" placeholder="Имя Фамилия"></label>
-            <label class="popup-feedback-label-input">Ваш e-mail: <input type="email" name="email" placeholder="email@example.com"></label>
-            <label class="popup-feedback-label-textarea">Текст письма: <textarea name="msg" placeholder="В свободной форме"></textarea></label>
+          <div class="popup-feedback-inner popup-feedback-inputs-box">
+            <label class="popup-feedback-label-input">Ваше имя: <input class="popup-input" type="text" name="name" placeholder="Имя Фамилия"></label>
+            <label class="popup-feedback-label-input">Ваш e-mail: <input class="popup-input" type="email" name="email" placeholder="email@example.com"></label>
+            <label class="popup-feedback-label-textarea">Текст письма: <textarea class="popup-input" name="msg" placeholder="В свободной форме"></textarea></label>
           </div>
           <div class="popup-controls popup-feedback-inner">
-            <button class="button-red" type="submit">Отправить</button>
+            <button class="popup-feedback-button button-red" type="submit">Отправить</button>
           </div>
         </form>
-        <button class="popup-close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
+        <button class="popup-close-button popup-close" type="button"><span class="visually-hidden">Закрыть</span></button>
       </section>
 
       <section class="popup popup-cartinfo">
@@ -352,17 +366,14 @@
         <div class="popup-cartinfo-inner">
           <p class="success-message">Товар добавлен в корзину!</p>
         </div>
-        <div class="popup-controls popup-cartinfo-controls">
-          <button class="button-red" type="button">Оформить заказ</button>
-          <button class="button-white" type="button">Продолжить покупки</button>
+        <div class="popup-controls popup-cartinfo-controls-box">
+          <a class="popup-cartinfo-control button-red" href="blank.html">Оформить заказ</a>
+          <button class="popup-cartinfo-control button-white popup-close" type="button">Продолжить покупки</button>
         </div>
-        <button class="popup-close-button" type="button"><span class="visually-hidden">Закрыть</span></button>
+        <button class="popup-close-button popup-close" type="button"><span class="visually-hidden">Закрыть</span></button>
       </section>
     </div>
 
-    <div class="popup-product-hover">
-      <button class="button-buy" type="button">Купить</button>
-      <button class="button-bookmark" type="button">В закладки</button>
-    </div>
+    <script src="js/technomart.js"></script>
   </body>
 </html>
