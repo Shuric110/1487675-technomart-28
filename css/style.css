@@ -810,11 +810,11 @@ img {
 
 .promo-slider-nav button {
   display: block;
-  background: none;
   border: none;
   padding: 0;
   width: 10px;
   height: 10px;
+  background-color: transparent;
   background-image: url("../img/slider-dot.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -1013,7 +1013,7 @@ img {
   box-sizing: border-box;
   height: 38px;
   border: none;
-  background: none;
+  background-color: transparent;
   background-image: url("../img/red-arrow-button.svg");
   background-repeat: no-repeat;
   background-position: calc(50% + 6px) center;
@@ -1632,7 +1632,6 @@ img {
 
 .catalog-info-block {
   padding-top: 65px;
-  padding-bottom: 67px;
 }
 
 .catalog-info-block p {
@@ -1716,7 +1715,7 @@ img {
   width: 21px;
   height: 21px;
   border: none;
-  background: none;
+  background-color: transparent;
   background-image: url("../img/icon-close.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -1950,9 +1949,9 @@ img {
 
 .main-footer-logo {
   width: 220px;
-  height: 68px;
+  height: 67px;
   box-sizing: border-box;
-  padding-top: 21px;
+  padding-top: 19px;
 }
 
 .main-footer-address p {
@@ -1978,7 +1977,7 @@ img {
   flex-wrap: wrap;
   justify-content: flex-end;
   margin: 0 -60px 0 0;
-  padding: 4px 0 0 0;
+  padding: 3px 0 0 0;
   list-style: none;
   font-size: 18px;
   color: var(--background-accent);
