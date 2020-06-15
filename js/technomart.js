@@ -67,7 +67,7 @@
     }
   };
 
-  var makePopupLink = function (activatorClass, popupClass) {
+  var makePopupLink = function (activatorClass, popupClass, onOpenPopup) {
     var activators = document.querySelectorAll('.' + activatorClass);
     var popup = document.querySelector('.' + popupClass);
     if (popup) {
@@ -75,6 +75,9 @@
         activators[i].addEventListener('click', function (evt) {
           evt.preventDefault();
           openPopup(popup);
+          if (onOpenPopup) {
+            onOpenPopup(popup);
+          }
         });
       }
     }
@@ -155,6 +158,9 @@
         popupFeedback.classList.remove("popup-error");
         popupFeedback.offsetWidth;
         popupFeedback.classList.add("popup-error");
+      } else {
+        localStorage.setItem('feedback-name', feedbackName.value);
+        localStorage.setItem('feedback-email', feedbackEmail.value);
       }
     });
   };
@@ -164,10 +170,23 @@
     popupWrapper.addEventListener('click', handlePopupWrapperClick);
 
     makePopupLink('contacts-block-map', 'popup-map');
-    makePopupLink('contacts-block-feedback', 'popup-feedback');
+    makePopupLink('contacts-block-feedback', 'popup-feedback', function (popup) {
+      var feedbackName = popup.querySelector('[name=name]');
+      var feedbackEmail = popup.querySelector('[name=email]');
+      var feedbackMsg = popup.querySelector('[name=msg]');
+      feedbackName.value = localStorage.getItem('feedback-name');
+      feedbackEmail.value = localStorage.getItem('feedback-email');
+      feedbackMsg.value = '';
+      if (!feedbackName.value) {
+        feedbackName.focus();
+      }
+      else if (!feedbackEmail.value) {
+        feedbackEmail.focus();
+      } else {
+        feedbackMsg.focus();
+      }
+    });
     makePopupLink('button-buy', 'popup-cartinfo');
-
-//    makeCardButtonsPopup();
 
     makeFeedbackValidator();
 

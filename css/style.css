@@ -1746,14 +1746,9 @@ img {
   padding: 0;
 }
 
-.popup-map::before {
-  position: absolute;
-  width: 100%;
-}
-
-.popup-map img {
-  max-width: none;
-  margin: -15px -15px -22px;
+.popup-map-iframe {
+  display: block;
+  border: none;
 }
 
 .popup-feedback-inner {
