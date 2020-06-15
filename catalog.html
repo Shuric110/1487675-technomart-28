@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -41,7 +41,7 @@
           <div class="main-header-middle-column main-header-middle-column-address">
             <address class="main-header-address">
               <div class="main-header-phone-box">
-                <a class="main-header-phone-link" href="tel:+7-812-555-05-55">+7 (812) 555-05-55</a>
+                <a class="main-header-phone-link" href="tel:+78125550555">+7 (812) 555-05-55</a>
               </div>
               <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </address>
@@ -246,9 +246,11 @@
                     </div>
                   </div>
                   <div class="filter-range-input-container">
-                    <input class="filter-range-input" type="text" name="min-price" value="0">
+                    <label class="visually-hidden" for="filter-min-price">Минимальная цена:</label>
+                    <input id="filter-min-price" class="filter-range-input" type="text" name="min-price" value="0">
                     —
-                    <input class="filter-range-input" type="text" name="max-price" value="30000">
+                    <label class="visually-hidden" for="filter-max-price">Максимальная цена:</label>
+                    <input id="filter-max-price" class="filter-range-input" type="text" name="max-price" value="30000">
                   </div>
                 </div>
               </fieldset>
@@ -316,7 +318,7 @@
           <address class="main-footer-address">
             <p>
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-              <a href="tel:+7-812-555-05-55">+7 (812) 555-05-55</a>
+              <a href="tel:+78125550555">+7 (812) 555-05-55</a>
             </p>
           </address>
         </div>
@@ -391,6 +393,6 @@
       </section>
     </div>
 
-    <script src="js/technomart.js"></script>
+    <script src="js/technomart.min.js"></script>
   </body>
 </html>
