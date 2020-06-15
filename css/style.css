@@ -448,17 +448,15 @@ img {
 .main-header-address p {
   color: var(--menu-basic);
   font-size: 14px;
-  margin: 0;
-  margin-top: 3px;
+  margin: 3px 0 0;
   text-align: center;
 }
 
 .main-header-account {
   font-size: 21px;
   list-style: none;
-  margin: 0;
+  margin: 4px 0 0;
   padding: 0;
-  margin-top: 4px;
   display: flex;
   justify-content: flex-end;
 }
@@ -546,9 +544,8 @@ img {
   line-height: 18px;
   color: var(--menu-basic);
   list-style: none;
-  margin: 0;
+  margin: 7px 0 0 0;
   padding: 0;
-  margin-top: 7px;
   display: flex;
   justify-content: center;
 }
@@ -576,7 +573,8 @@ img {
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   padding-left: 15px;
   padding-right: 10px;
   color: var(--basic-white);
@@ -613,9 +611,7 @@ img {
 }
 
 .section-title-block {
-  padding: 28px;
-  padding-top: 28px;
-  padding-bottom: 27px;
+  padding: 28px 28px 27px;
   position: relative;
   margin-bottom: 20px;
 }
@@ -654,8 +650,7 @@ img {
 }
 
 .common-block p {
-  margin: 0;
-  margin-top: 24px;
+  margin: 24px 0 0 0;
 }
 
 .common-block p ~ p {
@@ -716,8 +711,7 @@ img {
   font-size: 24px;
   line-height: 30px;
   color: var(--basic-white);
-  margin: 0;
-  margin-bottom: auto;
+  margin: 0 0 auto 0;
 }
 
 .promo-item-button {
@@ -863,8 +857,7 @@ img {
 }
 
 .promo-slider-item-header p {
-  margin: 0;
-  margin-top: 5px;
+  margin: 5px 0 0 0;
 }
 
 .promo-slider-item h3 {
@@ -889,9 +882,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin: 0;
-  margin-top: 19px;
-  margin-bottom: 16px;
+  margin: 19px 0 16px;
   padding: 0;
   text-transform: uppercase;
 }
@@ -998,9 +989,7 @@ img {
   font-size: 18px;
   line-height: 21px;
   text-align: center;
-  margin: 0;
-  margin-top: 8px;
-  margin-bottom: auto;
+  margin: 8px 0 auto;
 }
 
 .product-card-oldprice {
@@ -1010,8 +999,7 @@ img {
   text-decoration: line-through;
   text-transform: uppercase;
   color: var(--price-gray);
-  margin: 0;
-  margin-top: 2px;
+  margin: 2px 0 0 0;
 }
 
 .product-card-button {
@@ -1036,10 +1024,8 @@ img {
 
 .product-pagination {
   list-style: none;
-  padding: 0;
+  padding: 48px 0 49px;
   margin: 0;
-  padding-top: 48px;
-  padding-bottom: 49px;
   display: flex;
 }
 
@@ -1058,7 +1044,7 @@ img {
   text-transform: uppercase;
 }
 
-.product-pagination.product-pagination-next {
+.product-pagination .product-pagination-next {
   padding-left: 31px;
   padding-right: 31px;
 }
@@ -1085,9 +1071,8 @@ img {
 
 .partners-block-list {
   list-style: none;
-  margin: 0;
+  margin: 20px 0 0 0;
   padding: 0;
-  margin-top: 20px;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 220px 220px 220px 220px;
@@ -1139,9 +1124,9 @@ img {
   font-family: "Cuprum", "Arial Narrow", sans-serif;
   font-size: 21px;
   list-style: none;
-  margin: 0;
   padding: 0;
   margin-top: 2px;
+  margin-left: 0;
   margin-right: auto;
   margin-bottom: 50px;
   width: 240px;
@@ -1253,10 +1238,8 @@ img {
   font-size: 18px;
   line-height: 24px;
   list-style: none;
-  padding: 0;
-  margin: 0;
-  margin-top: 2px;
-  padding-left: 37px;
+  padding: 0 0 0 37px;
+  margin: 2px 0 0 0;
 }
 
 .about-block-partner-list > li + li {
@@ -1322,8 +1305,7 @@ img {
   font-weight: normal;
   font-size: 13px;
   flex-basis: 150px;
-  margin: 0;
-  margin-right: auto;
+  margin: 0 auto 0 0;
 }
 
 .sort-by-container {
@@ -1425,12 +1407,10 @@ img {
 }
 
 .filter-fieldset {
-  padding: 0;
-  margin: 0;
+  padding: 0 0 25px;
+  margin: 0 0 2px;
   border: none;
   border-bottom: solid 1px var(--border-gray);
-  padding-bottom: 25px;
-  margin-bottom: 2px;
 }
 
 .filter-fieldset:last-of-type {
@@ -1774,8 +1754,7 @@ img {
 
 .popup-map img {
   max-width: none;
-  margin: -15px;
-  margin-bottom: -22px;
+  margin: -15px -15px -22px;
 }
 
 .popup-feedback-inner {
@@ -1846,7 +1825,9 @@ img {
 }
 
 .popup-cartinfo-controls-box {
-  padding: 37px 50px;
+  padding-top: 37px;
+  padding-bottom: 37px;
+  padding-right: 50px;
   padding-left: 52px;
   display: flex;
   justify-content: center;
@@ -1996,10 +1977,8 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  margin: 0;
-  margin-right: -60px;
-  padding: 0;
-  padding-top: 4px;
+  margin: 0 -60px 0 0;
+  padding: 4px 0 0 0;
   list-style: none;
   font-size: 18px;
   color: var(--background-accent);
