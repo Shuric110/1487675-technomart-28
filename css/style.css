@@ -406,6 +406,7 @@ img {
   font-weight: normal;
   margin: 0;
   padding-left: 30px;
+  padding-right: 60px;
 }
 
 .main-header-address {
@@ -1208,10 +1209,20 @@ img {
   background-position: calc(100% - 1px) 21px;
 }
 
+.services-block-page.page-1 p
+{
+  max-width: 275px
+}
+
 .services-block-page.page-2 {
   background-image: url("../img/services-warranty.png");
   background-repeat: no-repeat;
   background-position: 100% 4px;
+}
+
+.services-block-page.page-2 p
+{
+  max-width: 320px
 }
 
 .services-block-page.page-3 {
@@ -1219,6 +1230,12 @@ img {
   background-repeat: no-repeat;
   background-position: 100% 2px;
 }
+
+.services-block-page.page-3 p
+{
+  max-width: 300px
+}
+
 
 /* Main - about & contacts */
 
@@ -1271,6 +1288,10 @@ img {
   width: 300px;
   padding-top: 70px;
   padding-bottom: 70px;
+}
+
+.contacts-block p {
+  max-width: 190px;
 }
 
 .contacts-block-map {
@@ -1639,6 +1660,9 @@ img {
   line-height: 25px;
 }
 
+.catalog-info-block p + p {
+  margin-top: 0px;
+}
 
 /* Main - popup*/
 
@@ -1749,6 +1773,9 @@ img {
 .popup-map-iframe {
   display: block;
   border: none;
+  background-image: url("../img/popup-map.png");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .popup-feedback-inner {
