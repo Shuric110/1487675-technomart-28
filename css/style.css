@@ -1124,6 +1124,10 @@ img {
   line-height: 25px;
 }
 
+.services-section p + p {
+  margin-top: 0;
+}
+
 .services-block-content {
   margin-top: 67px;
   display: flex;
@@ -1195,8 +1199,8 @@ img {
 
 .services-block-page {
   width: 620px;
-  min-height: 267px;
-  padding-bottom: 20px;
+  min-height: 247px;
+  padding-bottom: 40px;
   display: none;
 }
 
