@@ -127,7 +127,8 @@ img {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -257,6 +258,14 @@ img {
   padding-top: 10px;
   padding-bottom: 8px;
   padding-right: 30px;
+}
+
+.main-header-search-input::-webkit-input-placeholder {
+  color: var(--basic-white);
+}
+
+.main-header-search-input::-moz-placeholder {
+  color: var(--basic-white);
 }
 
 .main-header-search-input::placeholder,
@@ -1694,12 +1703,23 @@ img {
 
 .popup.active {
   display: block;
-  animation: 0.7s fadein;
+  -webkit-animation: 0.7s fadein;
+          animation: 0.7s fadein;
   opacity: 1;
 }
 
 .popup.popup-error {
-  animation: shake 0.6s;
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadein {
@@ -1708,6 +1728,20 @@ img {
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
   }
 }
 
